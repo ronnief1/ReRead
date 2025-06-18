@@ -441,6 +441,52 @@ def main(args):
         model.head = nn.Linear(in_features=in_dim, out_features=args.nb_classes)
         trunc_normal_(model.head.weight, std=2e-5)
 
+    elif 'urfound' in args.init_weights.lower():
+        print('Linear probing UrFound')
+        model = vit_base_patch16(
+            img_size=args.input_size,
+            num_classes=args.nb_classes,
+            drop_path_rate=args.drop_path,
+            representation_method=args.representation_method,
+        )
+        
+        if args.ft_weights:
+            checkpoint = torch.load(args.ft_weights, map_location="cpu")
+            print("Load pre-trained checkpoint from: %s" % args.ft_weights)
+
+            checkpoint_model = checkpoint
+            del checkpoint_model['head.bias']
+            del checkpoint_model['head.weight']
+
+            state_dict = model.state_dict()
+            msg = model.load_state_dict(checkpoint_model, strict=False)
+            
+                    # manually initialize fc layer
+            if args.representation_method == 'concat':
+                model.head = nn.Linear(in_features=1536, out_features=args.nb_classes)
+            trunc_normal_(model.head.weight, std=2e-5)
+        else:
+            print('Loading weights from ', args.init_weights) 
+            checkpoint = torch.load(args.init_weights, map_location='cpu')
+            
+            checkpoint_model = checkpoint["model"]
+            
+            state_dict = model.state_dict()
+            for k in ["head.weight", "head.bias"]:
+                if (
+                    k in checkpoint_model
+                    and checkpoint_model[k].shape != state_dict[k].shape
+                ):
+                    print(f"Removing key {k} from pretrained checkpoint")
+                    del checkpoint_model[k]
+            
+            msg = model.load_state_dict(checkpoint_model, strict=False)
+
+            if args.representation_method == 'concat':
+                    model.head = nn.Linear(in_features=1536, out_features=args.nb_classes)
+                # manually initialize fc layer
+            trunc_normal_(model.head.weight, std=2e-5)
+
        #RETFound timm implementation
 #             if args.ft_weights is None:
 #                 state_dict = torch.load(args.init_weights)['teacher']
