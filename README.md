@@ -2,9 +2,9 @@
 
 ## SOTA Fine-tuned weights
 If you want to skip the fine-tuning step and just want the retinal FM vision weights resulting from our refinement scheme:  
-**ReRead fine-tuned weights for RETFound**: https://drive.google.com/file/d/1XEkemQqEZMf_ayJPS9udlkQAzCL2HRsf/view?usp=drive_link  
-**ReRead fine-tuned weights for VisionFM**: https://drive.google.com/file/d/1KPxULUnhiU0IrlVuA1vy687niSkJNJdz/view?usp=drive_link  
-**ReRead fine-tuned weights for UrFound**: https://drive.google.com/file/d/1RLpNwffh_Acr2SlvBei7eo9rIKTiJl59/view?usp=sharing
+**RetFiner fine-tuned weights for RETFound**: https://drive.google.com/file/d/1XEkemQqEZMf_ayJPS9udlkQAzCL2HRsf/view?usp=drive_link  
+**RetFiner fine-tuned weights for VisionFM**: https://drive.google.com/file/d/1KPxULUnhiU0IrlVuA1vy687niSkJNJdz/view?usp=drive_link  
+**RetFiner fine-tuned weights for UrFound**: https://drive.google.com/file/d/1RLpNwffh_Acr2SlvBei7eo9rIKTiJl59/view?usp=sharing
 
 ## Fine-tuning
 If you want to run our fine-tuning scheme on your vision model:
