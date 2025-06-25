@@ -1,4 +1,4 @@
-# ReRead: An Efficient Vision-Language <ins>RE</ins>finement Scheme for <ins>RE</ins>tinal Found<ins>A</ins>tion Mo<ins>D</ins>els
+# RetFiner: An Efficient Vision-Language <ins>RE</ins>finement Scheme for <ins>RE</ins>tinal Found<ins>A</ins>tion Mo<ins>D</ins>els
 
 ## SOTA Fine-tuned weights
 If you want to skip the fine-tuning step and just want the retinal FM vision weights resulting from our refinement scheme:  
@@ -9,15 +9,15 @@ If you want to skip the fine-tuning step and just want the retinal FM vision wei
 ## Fine-tuning
 If you want to run our fine-tuning scheme on your vision model:
 
-Navigate into ReRead/
+Navigate into RetFiner/
 
-Create a new virtual environment in ReRead/ and install requirements.txt
+Create a new virtual environment in RetFiner/ and install requirements.txt
 
-Text encoder weights: Download BERT weights here and put them under ReRead/pretrained_weights/:   Will be released upon acceptance.
+Text encoder weights: Download BERT weights here and put them under RetFiner/pretrained_weights/:   Will be released upon acceptance.
 
-Vision encoder weights: Put your vision model in ReRead/  
+Vision encoder weights: Put your vision model in RetFiner/  
 
-Our in-house image-text training data is private so you will need to use your own. Edit the dataloader in ReRead/ImageCaptionDataset.py accordingly. __getitem__ should return a list consisting of two elements: an image (torch tensor) and a report (string).
+Our in-house image-text training data is private so you will need to use your own. Edit the dataloader in RetFiner/ImageCaptionDataset.py accordingly. __getitem__ should return a list consisting of two elements: an image (torch tensor) and a report (string).
 
 Then in the command line run:
 ```sh
