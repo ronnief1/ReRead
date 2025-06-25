@@ -1,0 +1,12 @@
+exclusion_list.txt
+output/
+bin/
+venv/
+__*/
+.*
+out/
+*.md
+*.log
+session
+run_local.sh
+sync
