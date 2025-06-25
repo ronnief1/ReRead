@@ -1,4 +1,4 @@
-# RetFiner: An Efficient Vision-Language <ins>RE</ins>finement Scheme for <ins>RE</ins>tinal Found<ins>A</ins>tion Mo<ins>D</ins>els
+# RetFiner: A Vision-Language Refinement Scheme for Retinal Foundation Models
 
 ## SOTA Fine-tuned weights
 If you want to skip the fine-tuning step and just want the retinal FM vision weights resulting from our refinement scheme:  
