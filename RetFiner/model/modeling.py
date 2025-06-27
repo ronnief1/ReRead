@@ -11,7 +11,7 @@ import torch.nn.functional as F
 
 
 
-class ReReadConfig(object):
+class RetFinerConfig(object):
     def __init__(self,
                  config):
 
@@ -25,16 +25,16 @@ class ReReadConfig(object):
                              "file (str)")
     @classmethod
     def from_dict(cls, json_object):
-        """Constructs a `ReReadConfig` from a
+        """Constructs a `RetFinerConfig` from a
            Python dictionary of parameters."""
-        config = ReReadConfig(vocab_size_or_config_json_file=-1)
+        config = RetFinerConfig(vocab_size_or_config_json_file=-1)
         for key, value in json_object.items():
             config.__dict__[key] = value
         return config
 
     @classmethod
     def from_json_file(cls, json_file):
-        """Constructs a `ReReadConfig` from a json file of parameters."""
+        """Constructs a `RetFinerConfig` from a json file of parameters."""
         with open(json_file, "r", encoding='utf-8') as reader:
             text = reader.read()
         return cls.from_dict(json.loads(text))
@@ -52,7 +52,7 @@ class ReReadConfig(object):
         return json.dumps(self.to_dict(), indent=2, sort_keys=True) + "\n"
 
 
-class ReReadPreTrainedModel(nn.Module):
+class RetFinerPreTrainedModel(nn.Module):
     """ An abstract class to handle weights initialization and
         a simple interface for dowloading and loading pretrained models.
     """
@@ -133,7 +133,7 @@ class TokenMasker(nn.Module):
         return tokens, labels
 
 
-class ReReadModel(ReReadPreTrainedModel):
+class RetFinerModel(RetFinerPreTrainedModel):
     def __init__(self, opts):
         super().__init__()
         config = opts
