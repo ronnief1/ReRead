@@ -1,10 +1,11 @@
 # RetFiner: A Vision-Language Refinement Scheme for Retinal Foundation Models
 
 ## SOTA Fine-tuned weights
-If you want to skip the fine-tuning step and just want the retinal FM vision weights resulting from our refinement scheme:  
-**RetFiner fine-tuned weights for RETFound**: https://drive.google.com/file/d/1XEkemQqEZMf_ayJPS9udlkQAzCL2HRsf/view?usp=drive_link  
-**RetFiner fine-tuned weights for VisionFM**: https://drive.google.com/file/d/1KPxULUnhiU0IrlVuA1vy687niSkJNJdz/view?usp=drive_link  
-**RetFiner fine-tuned weights for UrFound**: https://drive.google.com/file/d/1RLpNwffh_Acr2SlvBei7eo9rIKTiJl59/view?usp=sharing
+If you want to skip the fine-tuning step and just want the retinal FM vision weights resulting from our refinement scheme:
+
+- **RetFiner-R** (RetFiner-tuned weights for RETFound): https://drive.google.com/file/d/1XEkemQqEZMf_ayJPS9udlkQAzCL2HRsf/view?usp=drive_link
+- **RetFiner-V** (RetFiner-tuned weights for VisionFM): https://drive.google.com/file/d/1KPxULUnhiU0IrlVuA1vy687niSkJNJdz/view?usp=drive_link
+- **RetFiner-U** (RetFiner-tuned weights for UrFound): https://drive.google.com/file/d/1RLpNwffh_Acr2SlvBei7eo9rIKTiJl59/view?usp=sharing
 
 ## Fine-tuning
 If you want to run our fine-tuning scheme on your vision model:
@@ -15,7 +16,7 @@ Create a new virtual environment in RetFiner/ and install requirements.txt
 
 Text encoder weights: Download BERT weights here and put them under RetFiner/pretrained_weights/:   Will be released upon acceptance.
 
-Vision encoder weights: Put your vision model in RetFiner/  
+Vision encoder weights: Put your vision model in RetFiner/
 
 Our in-house image-text training data is private so you will need to use your own. Edit the dataloader in RetFiner/ImageCaptionDataset.py accordingly. __getitem__ should return a list consisting of two elements: an image (torch tensor) and a report (string).
 
@@ -40,9 +41,40 @@ For example, in retfound.sh, you would change the ft_weights arg to _weights/<my
 Results are found in __results/.
 
 ## Linear probing datasets
-Duke iAMD: https://people.duke.edu/~sf59/RPEDC_Ophth_2013_dataset.htm  
-Harvard Glaucoma: https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP  
-Noor Eye Hospital: https://hrabbani.site123.me/available-datasets/dataset-for-oct-classification-50-normal-48-amd-50-dme  
-OCTDL: https://data.mendeley.com/datasets/sncdhf53xc/4  
-OCTID: https://borealisdata.ca/dataverse/OCTID  
-NEHUT: https://data.mendeley.com/datasets/8kt969dhx6/1
+
+- Duke iAMD: https://people.duke.edu/~sf59/RPEDC_Ophth_2013_dataset.htm
+- Harvard Glaucoma: https://github.com/Harvard-Ophthalmology-AI-Lab/Harvard-GDP
+- Noor Eye Hospital: https://hrabbani.site123.me/available-datasets/dataset-for-oct-classification-50-normal-48-amd-50-dme
+- OCTDL: https://data.mendeley.com/datasets/sncdhf53xc/4
+- OCTID: https://borealisdata.ca/dataverse/OCTID
+- NEHUT: https://data.mendeley.com/datasets/8kt969dhx6/1
+
+
+
+## License
+This repository contains the following fine-tuned models:
+
+| Model Name      | Base Model | Original License | Fine-Tuned License |
+|-----------------|------------|------------------|---------------------|
+| **RetFiner-U**  | [UrFound](https://github.com/yukkai/UrFound) | [MIT](https://opensource.org/licenses/MIT) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
+| **RetFiner-R**  | [RETFound](https://github.com/rmaphoh/RETFound) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
+| **RetFiner-V**  | [VisionFM](https://github.com/VisionFM) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
+
+
+
+## Citation
+
+If you use any of our models, please do the following:
+
+1. **Cite the original base models**:
+   - **UrFound**: Yu, Kai, et al. "UrFound: Towards Universal Retinal Foundation Models via Knowledge-Guided Masked Modeling." International Conference on Medical Image Computing and Computer-Assisted Intervention. Cham: Springer Nature Switzerland, 2024.
+   - **RETFound**: Zhou, Yukun, et al. "A foundation model for generalizable disease detection from retinal images." Nature 622.7981 (2023): 156-163.
+   - **VisionFM**: Qiu, Jianing, et al. "Development and validation of a multimodal multitask vision foundation model for generalist ophthalmic artificial intelligence." NEJM AI 1.12 (2024): AIoa2300221.
+2. **Cite this work**:
+   ```bibtex
+   @misc{fecso2025retfiner,
+     author = {Fecso, Ronald and Morano, José and Schmidt-Erfurth, Ursula and Bogunović, Hrvoje},
+     title = {RetFiner: A Vision-Language Refinement Scheme for Retinal Foundation Models},
+     year = {2025},
+   }
+   ```

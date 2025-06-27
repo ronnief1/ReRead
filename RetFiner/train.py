@@ -58,7 +58,7 @@ early_stopping = EarlyStopping(
 callbacks = [best_model_checkpoint, step_checkpoint, early_stopping]
 
 
-class LightningReRead(LightningModule):
+class LightningRetFiner(LightningModule):
     def __init__(self, model):
         super().__init__()
         self.model = model
@@ -115,7 +115,7 @@ class LightningReRead(LightningModule):
         self.loss_metrics['test'].to(device).reset()
 
 
-lit_model = LightningReRead(model).to(device)
+lit_model = LightningRetFiner(model).to(device)
 
 trainer = Trainer(
     accelerator="gpu",

@@ -3,7 +3,7 @@ from torch import nn
 from torch.nn import functional as F
 from apex.normalization.fused_layer_norm import FusedLayerNorm as LayerNorm
 import torch.distributed as dist
-from .modeling import ReReadModel
+from .modeling import RetFinerModel
 import numpy as np
 import random
 from torchvision.transforms import *
@@ -71,8 +71,8 @@ class Match_head(nn.Module):
         return self.linear2(self.layernorm(self.activation(self.linear1(cls_token))))
 
 
-class ReRead(ReReadModel):
-    """ ReRead pretraining """
+class RetFiner(RetFinerModel):
+    """ RetFiner pretraining """
     def __init__(self, opts):
         super().__init__(opts)
         config = opts
