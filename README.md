@@ -52,7 +52,11 @@ Results are found in __results/.
 
 
 ## License
-This repository contains the following fine-tuned models:
+
+The models and associated code are released under the CC-BY-NC 4.0 license and may only be used for non-commercial, academic research purposes with proper attribution. See [LICENSE](LICENSE) for more details.
+
+Specifically, the following licenses apply to the base models and fine-tuned models:
+
 
 | Model Name      | Base Model | Original License | Fine-Tuned License |
 |-----------------|------------|------------------|---------------------|
