@@ -2,14 +2,14 @@
 
 This is the official repository of the paper "RetFiner: A Vision-Language Refinement Scheme for Retinal Foundation Models", by Ronald Fecso, José Morano, Ursula Schmidt-Erfurth, and Hrvoje Bogunović, accepted for presentation at [MICCAI 2025](https://conferences.miccai.org/2025/en/).
 
-## SOTA Fine-tuned weights
+## SOTA RetFined weights
 If you want to skip the fine-tuning step and just want the retinal FM vision weights resulting from our refinement scheme:
 
 - **RetFiner-R** (RetFiner-tuned weights for RETFound): https://drive.google.com/file/d/1XEkemQqEZMf_ayJPS9udlkQAzCL2HRsf/view?usp=drive_link
 - **RetFiner-V** (RetFiner-tuned weights for VisionFM): https://drive.google.com/file/d/1KPxULUnhiU0IrlVuA1vy687niSkJNJdz/view?usp=drive_link
 - **RetFiner-U** (RetFiner-tuned weights for UrFound): https://drive.google.com/file/d/1RLpNwffh_Acr2SlvBei7eo9rIKTiJl59/view?usp=sharing
 
-## Fine-tuning
+## RetFining
 If you want to run our fine-tuning scheme on your vision model:
 
 Navigate into RetFiner/
