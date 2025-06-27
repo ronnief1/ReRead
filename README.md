@@ -57,8 +57,8 @@ This repository contains the following fine-tuned models:
 | Model Name      | Base Model | Original License | Fine-Tuned License |
 |-----------------|------------|------------------|---------------------|
 | **RetFiner-U**  | [UrFound](https://github.com/yukkai/UrFound) | [MIT](https://opensource.org/licenses/MIT) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
-| **RetFiner-R**  | [RETFound](https://github.com/rmaphoh/RETFound) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
-| **RetFiner-V**  | [VisionFM](https://github.com/VisionFM) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
+| **RetFiner-R**  | [RETFound](https://github.com/rmaphoh/RETFound_MAE) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
+| **RetFiner-V**  | [VisionFM](https://github.com/ABILab-CUHK/VisionFM) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) | [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
 
 
 
