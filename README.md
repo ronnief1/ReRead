@@ -9,7 +9,8 @@ This is the official repository of the paper "RetFiner: A Vision-Language Refine
 If you want to skip the fine-tuning step and just want the retinal FM vision weights resulting from our refinement scheme:
 
 > [!IMPORTANT]
-> The weights of the models will be released for the MICCAI 2025 conference starting on 23/09/2025. We will update this section with the download links shortly before the conference.
+> The weights of the models will be released for the MICCAI 2025 conference, which takes place from September 23 to 27, 2025. Shortly before then, we will update this section with download links.
+
 
 - **RetFiner-R** (RetFiner-tuned weights for RETFound)
 - **RetFiner-V** (RetFiner-tuned weights for VisionFM)
