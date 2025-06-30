@@ -13,7 +13,7 @@ If you want to skip the fine-tuning step and just want the retinal FM vision wei
 - **RetFiner-U** (RetFiner-tuned weights for UrFound): https://drive.google.com/file/d/1RLpNwffh_Acr2SlvBei7eo9rIKTiJl59/view?usp=sharing
 
 ## RetFining
-If you want to run our fine-tuning scheme on your vision model:
+If you want to run RetFiner on your vision model:
 
 Navigate into RetFiner/
 
@@ -37,7 +37,7 @@ python get_vision_backbone_for_linprobing.py --path_to_model models/<model name>
 
 ## Linear probing
 
-Once you have your fine-tuned model, navigate into ../linear_probing/, set up a new virtual environment there, and then activate it. Then install requirements.txt.
+Once you have your RetFined model, navigate into ../linear_probing/, set up a new virtual environment there, and then activate it. Then install requirements.txt.
 
 Then you can run one of the .sh scripts based on which model you have.
 
