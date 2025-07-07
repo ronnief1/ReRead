@@ -8,32 +8,22 @@ This is the official repository of the paper "RetFiner: A Vision-Language Refine
 
 We propose RetFiner (Fig. 1), an SSL vision-language refinement scheme that improves the representations of existing FMs and enables their efficient and direct adaptation to specific populations for improved downstream performance. Our method uses a diverse set of training objectives which take advantage of the rich supervisory signal found in textual data. We tested RetFiner on the retinal FMs RETFound, UrFound, and VisionFM (Table 1), showing significant improvements in linear probing performance on seven highly diverse OCT classification tasks, with an average increase of 5.7, 3.9, and 2.1 percentage points over their baselines, respectively .
 
+<br>
 
 ![image](https://github.com/user-attachments/assets/20f171e3-a3b9-4e97-af1b-c86008a20925)
+
 <div align="center">
 <b>Fig. 1. RetFiner method.</b> Cross-attention layers are activated only during the forward passes for ITM, MLM, and GM. An example of an OCT image and report is shown.
 </div>
-<!-- ![image](https://github.com/user-attachments/assets/7110bccb-7d12-4d38-b58e-9e8130b89f11) -->
 
 <br><br>
 
 <div align="center">
 <b>Table 1. Average linear probing performance over all downstream datasets.</b> The best metric value out of all the models (<b>bolded</b>) and out of the base models (<ins>underlined</ins>) were compared to measure if there was a statistically significant difference using the Wilcoxon signed-rank test (**: p < 0.01, ***: p < 0.001). Values in parentheses represent change in performance compared to their baseline counterpart.
-
-| Model         | BAcc (%)       | AUROC (%)     | AP (%)        |
-|---------------|----------------|---------------|---------------|
-| CLIP          | 73.6±12.3      | 90.6±8.6      | 84.5±9.9      |
-| DINOv2        | 74.5±12.5      | 90.4±9.7      | 84.7±11.7     |
-|               |                |               |               |
-| RETFound      | 78.1±11.6      | <ins>92.9</ins>±7.7      | 88.6±9.5      |
-| UrFound       | 78.6±11.1      | 92.7±8.5      | 88.5±9.5      |
-| VisionFM      | <ins>81.4</ins>±13.4      | 92.8±9.1      | <ins>89.3</ins>±10.7     |
-|               |                |               |               |
-| RetFiner-R    | __83.8__***±12.0 (+5.7) | 94.6±6.7 (+1.7) | 91.2±9.5 (+2.6) |
-| RetFiner-U    | 82.5±12.3 (+3.9)   | __94.7__**±7.7 (+2.0) | __92.3__***±8.4 (+3.8) |
-| RetFiner-V    | 83.5±12.2 (+2.1)   | 94.4±7.5 (+1.6) | 91.2±10.2 (+1.9) |
-
 </div>
+
+![image](https://github.com/user-attachments/assets/32689816-5f89-4c64-957b-26dc88aa2a0a)
+
 
 <br>
 
