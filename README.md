@@ -16,16 +16,15 @@ We propose RetFiner (Fig. 1), an SSL vision-language refinement scheme that impr
 <b>Fig. 1. RetFiner method.</b> Cross-attention layers are activated only during the forward passes for ITM, MLM, and GM. An example of an OCT image and report is shown.
 </div>
 
-<br><br>
+<br>
 
 <div align="center">
 <b>Table 1. Average linear probing performance over all downstream datasets.</b> The best metric value out of all the models (<b>bolded</b>) and out of the base models (<ins>underlined</ins>) were compared to measure if there was a statistically significant difference using the Wilcoxon signed-rank test (**: p < 0.01, ***: p < 0.001). Values in parentheses represent change in performance compared to their baseline counterpart.
 </div>
 
-![image](https://github.com/user-attachments/assets/32689816-5f89-4c64-957b-26dc88aa2a0a)
+![image](https://github.com/user-attachments/assets/69a778f0-21cb-46ec-a8c5-1e2c52c04de3)
 
 
-<br>
 
 ## SOTA RetFined weights
 
